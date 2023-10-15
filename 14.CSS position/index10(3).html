@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>css position</title>
+        <style>
+                body{
+                    height: 2000px;
+
+                }
+
+           .kotak1, .kotak2, .kotak3{
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            position: absolute;
+           }
+
+            .kotak1{
+                background-color: aqua;
+                z-index: 1;
+            }
+
+            .kotak2{
+                background-color: red;
+                z-index: 2;
+                top: 75px;
+                left: 75px;
+                    
+
+                /* position: absolute;
+                top: 0;
+                left: 0;
+                ket: position absolute jika digunakan, coneten yang sebelumnya di anggap ada akan di anggap tdk ada oleh conten yang ada di bawahnya*/
+
+              /*position: relative;
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                ket: position relatif jika di gunakan,itu akan membuat conten keluar dari dimensi awalnya namun tempat sebelumnya tdk akan terisi*/
+            }
+
+            .kotak3{
+                background-color: green;
+                z-index: 3;
+                top: 150px;
+                left: 150px;
+            }
+
+            .container{
+                width: 450px;
+                height: 450px;
+                border: 10px solid black;
+                margin: 50px auto;
+                position: relative
+            }
+
+            .nav{
+                z-index: 99999;
+                width: 100%;
+                height: 40px;
+                background-color: salmon;
+                position: fixed;
+                top: 0;
+                left: 0;
+               
+            }
+
+            .iklan{
+                z-index: 99999;
+                background-color: rgba(0, 0, 0, 0.6);
+                position: fixed;
+                top: 100px;
+                bottom: 100px;
+                left: 100px;
+                right: 100px;
+            }
+
+            .close{
+                width: 30px;
+                height: 30px;
+                background-color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                border: 2px solid black;
+                text-align: center;
+                line-height: 30px;
+                font-weight: bold;
+                position: absolute;
+                top: -15px;
+                right: -15px;
+                border-radius:50% ;
+            }
+        </style>
+
+    </head>
+
+    <body>
+                    <div class="nav"></div>
+
+            <div class="container">
+                <div class="kotak1"></div>        
+                <div class="kotak2"></div>
+                <div class="kotak3"></div>
+            </div>   
+
+            <div class="iklan">
+                <div class="close">X</div>
+            </div>
+
+                    
+
+        </body>
+
+</html>
